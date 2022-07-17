@@ -23,17 +23,43 @@ Partial Class formMenu
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(formMenu))
+        Me.btnGenerate = New System.Windows.Forms.Button()
+        Me.lblHeader = New System.Windows.Forms.Label()
+        Me.lblGenerate = New System.Windows.Forms.Label()
         Me.SuspendLayout()
+        '
+        'btnGenerate
+        '
+        resources.ApplyResources(Me.btnGenerate, "btnGenerate")
+        Me.btnGenerate.Name = "btnGenerate"
+        Me.btnGenerate.UseVisualStyleBackColor = True
+        '
+        'lblHeader
+        '
+        resources.ApplyResources(Me.lblHeader, "lblHeader")
+        Me.lblHeader.Name = "lblHeader"
+        '
+        'lblGenerate
+        '
+        resources.ApplyResources(Me.lblGenerate, "lblGenerate")
+        Me.lblGenerate.Name = "lblGenerate"
         '
         'formMenu
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.Controls.Add(Me.lblGenerate)
+        Me.Controls.Add(Me.lblHeader)
+        Me.Controls.Add(Me.btnGenerate)
         Me.MaximizeBox = False
         Me.Name = "formMenu"
         Me.ShowIcon = False
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
+    Friend WithEvents btnGenerate As Button
+    Friend WithEvents lblHeader As Label
+    Friend WithEvents lblGenerate As Label
 End Class
