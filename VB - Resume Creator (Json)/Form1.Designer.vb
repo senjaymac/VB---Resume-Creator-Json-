@@ -30,9 +30,10 @@ Partial Class formMenu
         '
         'btnGenerate
         '
+        Me.btnGenerate.BackColor = System.Drawing.Color.Linen
         resources.ApplyResources(Me.btnGenerate, "btnGenerate")
         Me.btnGenerate.Name = "btnGenerate"
-        Me.btnGenerate.UseVisualStyleBackColor = True
+        Me.btnGenerate.UseVisualStyleBackColor = False
         '
         'lblHeader
         '
@@ -48,6 +49,7 @@ Partial Class formMenu
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.Moccasin
         Me.Controls.Add(Me.lblGenerate)
         Me.Controls.Add(Me.lblHeader)
         Me.Controls.Add(Me.btnGenerate)
