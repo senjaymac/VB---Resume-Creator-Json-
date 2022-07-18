@@ -1,8 +1,8 @@
 {
     "Name": "Kazuha Venti Sucrose.",
     "Address": "Emerald Ave, Kentucky West Virginia Take me Home District ",
-    "emailAddress": "KazVenSuc@gmail.com",
-    "contactInfo": "09173456231 - 7140188",
+    "contactInfo": "KazVenSuc@gmail.com ",
+    "CNumber": "09173456231 / 7140188",
     "birthDate": "April 10, 1996",
     "Image": "avatar2.png",
 
@@ -16,15 +16,20 @@
     "headerAcademic": "ACADEMIC BACKGROUND",
     "College": "Mihoyo University: Bachelor of science in Martial Arts",
     "Highschool": "Liyue Harbor School 2011-2015",
+    "spacing": " ",
 
 
 
-    "headerSkills": "SKILLS and Experiences",
+
+
+    "headerSkills": "SKILLS",
     "skill1": "Dual Sword User Specialist",
     "Skill2": "Master Tactictician in art of War",
     "skill3": "Wildlife Specialist",
     "skill4": "Tenacious Mentality",
 
+
+    "headerExp": "On-site Experiences",
     "exp1": "Stationed at Gate Keeper at Chinese Royal Palace - 2years ",
     "exp2": "Emperor's Guard  - 3 years ",
     "exp3": "Headmaster at Defensive Arts Dojo "

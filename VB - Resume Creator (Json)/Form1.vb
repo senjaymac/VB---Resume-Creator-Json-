@@ -19,12 +19,13 @@ Public Class formMenu
         Dim image As iTextSharp.text.Image = iTextSharp.text.Image.GetInstance(resumeout.Image)
         image.ScalePercent(10.5F)
         image.Alignment = 10
-        Dim cut As LineSeparator = New LineSeparator(4.0F, 100.0F, BaseColor.BLACK, Element.ALIGN_CENTER, 1)
+        Dim cut As LineSeparator = New LineSeparator(2.0F, 100.0F, BaseColor.BLACK, Element.ALIGN_CENTER, 1)
         Dim fullName As Paragraph = New Paragraph(resumeout.Name & vbLf, font1)
         Dim Address As Paragraph = New Paragraph(vbLf & resumeout.Address, font3)
         Dim emailAddress As Paragraph = New Paragraph(resumeout.emailAddress, font3)
         Dim birthdate As Paragraph = New Paragraph(resumeout.birthDate & vbLf & vbLf, font3)
         Dim contactInfo As Paragraph = New Paragraph(resumeout.contactInfo, font3)
+        Dim CNumber As Paragraph = New Paragraph(resumeout.CNumber, font3)
 
 
         Dim headerObjective As Paragraph = New Paragraph(resumeout.headerObjective & vbLf & vbLf, font2)
@@ -34,16 +35,18 @@ Public Class formMenu
         Dim headerAcademic As Paragraph = New Paragraph(resumeout.headerAcademic & vbLf & vbLf, font2)
         Dim college As Phrase = New Phrase("          College      -         " & resumeout.college & vbLf, font3)
         Dim highschool As Phrase = New Phrase("          Highschool    -       " & resumeout.highSchool & vbLf, font3)
+
+
         Dim headerSkills As Paragraph = New Paragraph(resumeout.headerSkills & vbLf & vbLf, font2)
+        Dim skill1 As Paragraph = New Paragraph("        • " & resumeout.skill1 & vbLf, font3)
+        Dim skill2 As Paragraph = New Paragraph("        • " & resumeout.skill2 & vbLf, font3)
+        Dim skill3 As Paragraph = New Paragraph("        • " & resumeout.skill3 & vbLf, font3)
+        Dim skill4 As Paragraph = New Paragraph("        • " & resumeout.skill4 & vbLf & vbLf, font3)
 
-
-        Dim skill1 As Paragraph = New Paragraph(vbLf & "        • " & resumeout.skill1 & vbLf, font4)
-        Dim skill2 As Paragraph = New Paragraph("        • " & resumeout.skill2 & vbLf, font4)
-        Dim skill3 As Paragraph = New Paragraph("        • " & resumeout.skill3 & vbLf, font4)
-        Dim skill4 As Paragraph = New Paragraph("        • " & resumeout.skill4 & vbLf & vbLf, font4)
-        Dim exp1 As Paragraph = New Paragraph("        • " & resumeout.Exp1, font4)
-        Dim exp2 As Paragraph = New Paragraph("        • " & resumeout.Exp2, font4)
-        Dim exp3 As Paragraph = New Paragraph("        • " & resumeout.Exp3, font4)
+        Dim headerExp As Paragraph = New Paragraph(resumeout.headerExp & vbLf & vbLf, font2)
+        Dim exp1 As Paragraph = New Paragraph("        • " & resumeout.Exp1, font3)
+        Dim exp2 As Paragraph = New Paragraph("        • " & resumeout.Exp2, font3)
+        Dim exp3 As Paragraph = New Paragraph("        • " & resumeout.Exp3, font3)
         Dim footer As Paragraph = New Paragraph(resumeout.Footer, font5)
         footer.Alignment = Element.ALIGN_CENTER
 
@@ -52,13 +55,14 @@ Public Class formMenu
         pdfcreator.Add(Image)
         pdfcreator.Add(fullName)
         pdfcreator.Add(Address)
-        pdfcreator.Add(emailAddress)
-        pdfcreator.Add(birthDate)
         pdfcreator.Add(contactInfo)
+        pdfcreator.Add(CNumber)
+        pdfcreator.Add(birthdate)
 
         pdfcreator.Add(headerObjective)
         pdfcreator.Add(cut)
         pdfcreator.Add(objective)
+
         pdfcreator.Add(headerAcademic)
 
         pdfcreator.Add(cut)
@@ -72,6 +76,8 @@ Public Class formMenu
         pdfcreator.Add(skill3)
         pdfcreator.Add(skill4)
 
+        pdfcreator.Add(headerExp)
+        pdfcreator.Add(cut)
         pdfcreator.Add(exp1)
         pdfcreator.Add(exp2)
         pdfcreator.Add(exp3)
@@ -93,6 +99,7 @@ Public Class formMenu
         Public Property emailAddress As String
         Public Property birthDate As String
         Public Property contactInfo As String
+        Public Property CNumber As String
 
         Public Property headerObjective As String
         Public Property objective As String
@@ -102,6 +109,8 @@ Public Class formMenu
         Public Property college As String
         Public Property highSchool As String
 
+        Public Property spacing As String
+
 
 
         Public Property headerSkills As String
@@ -110,7 +119,7 @@ Public Class formMenu
         Public Property skill3 As String
         Public Property skill4 As String
 
-        Public Property headerExpheaderExperience As String
+        Public Property headerExp As String
         Public Property Exp1 As String
         Public Property Exp2 As String
         Public Property Exp3 As String
