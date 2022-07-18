@@ -32,7 +32,7 @@ Namespace My
 
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()> _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.VB___Resume_Creator__Json_.Form1
+            Me.MainForm = Global.VB___Resume_Creator__Json_.formMenu
         End Sub
     End Class
 End Namespace
